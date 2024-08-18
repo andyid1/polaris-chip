@@ -1,7 +1,7 @@
 import './components/title-app.js';
 import './components/to-dos.js';
 import './components/lit-atrib.js';
-import './components/lit-atrib.js';
+import './components/react-pro.js';
 
 const todosContainer = document.querySelector('#todo-container');
 

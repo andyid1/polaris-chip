@@ -32,5 +32,6 @@ class ReactPro extends LitElement {
   _logout() {
     this.name = null;
 }
+}
 
 customElements. define('react-pro', ReactPro)
