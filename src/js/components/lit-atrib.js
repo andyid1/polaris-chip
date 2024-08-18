@@ -1,19 +1,23 @@
-import { LitElement, html, css } from "lit";
+import { LitElement, html, css, nothing } from "lit";
 
 class LitAtribut extends LitElement {
+  static properties = {
+    minPasswordLength: {
+      type: Number,
+    },
+    freeze: {
+      type: Boolean,
+    },
+    withPlaceholder: {
+      type: Boolean,
+    },
+  };
 
-    static properties = {
-        minPasswordLength: {
-            type: Number,
-        }
+  constructor() {
+    super();
 
-    }
-
-    constructor() {
-        super();
-
-        this.minPasswordLength = 8;
-    }
+    this.minPasswordLength = 8;
+  }
 
   static styles = css`
     form > div {
@@ -26,17 +30,26 @@ class LitAtribut extends LitElement {
     }
   `;
 
+
   render() {
     return html`
       <form>
         <div>
           <label for="email">Email</label>
-          <input type="email" id="email" />
+          <input type="email" id="email" 
+          ?readonly=${this.freeze}
+          placeholder=${this.withPlaceholder ? 'Masukkan email' : nothing}
+          />
         </div>
         <div>
           <label for="password">Password</label>
-          <input type="password" id="password" 
-          minlength=${this.minPasswordLength}
+          <input
+            type="password"
+            id="password"
+            ?readonly=${this.freeze}
+            minlength=${this.minPasswordLength}
+            placeholder=${this.withPlaceholder ? 
+            "Masukkan password" : nothing}
           />
         </div>
 
@@ -46,7 +59,6 @@ class LitAtribut extends LitElement {
       </form>
     `;
   }
-
 }
 
 customElements.define("lit-atribut", LitAtribut);
