@@ -2,7 +2,9 @@ import { LitElement, html, css, nothing } from "lit";
 
 class ReactPro extends LitElement {
   static properties = {
-    name: {},
+    name: {
+        type: Boolean,
+    },
   };
 
   render() {

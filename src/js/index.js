@@ -5,6 +5,18 @@ import './components/react-pro.js';
 
 const todosContainer = document.querySelector('#todo-container');
 
+const reactPro = document.querySelector('react-pro');
+const addAttrButton = document.querySelector('button#add-attribute');
+const removeAttrButton = document.querySelector('button#remove-attribute');
+
+addAttrButton.addEventListener('click', () => {
+    reactPro.setAttribute('name', 'Andy Yulianto');
+removeAttrButton.addEventListener('click', () => {
+    reactPro.removeAttribute('name');
+    
+}))
+
+
 const todos = [
     {
         title: ' Belajar CSS Preprocessor dengan Sass',
