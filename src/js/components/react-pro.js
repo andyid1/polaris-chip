@@ -4,8 +4,9 @@ class ReactPro extends LitElement {
   static properties = {
     name: {
       // type: Boolean, perubahan sebelumnya
-      
+
       type: String,
+      reflect: true,
    
     converter: {
       fromAttribute(value, type) {
@@ -17,7 +18,7 @@ class ReactPro extends LitElement {
         return value;
       },
       toAttribute(value, type) {
-        console.log('toAttribute');
+        console.log('toAttributeww');
 
         return String(value).toUpperCase();
       },
