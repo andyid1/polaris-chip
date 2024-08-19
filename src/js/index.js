@@ -11,10 +11,13 @@ const removeAttrButton = document.querySelector('button#remove-attribute');
 
 addAttrButton.addEventListener('click', () => {
     reactPro.setAttribute('name', 'Andy Yulianto');
+    
+});
+
 removeAttrButton.addEventListener('click', () => {
     reactPro.removeAttribute('name');
-    
-}))
+
+});
 
 
 const todos = [
