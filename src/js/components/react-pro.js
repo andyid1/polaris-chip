@@ -3,7 +3,8 @@ import { LitElement, html, css, nothing } from "lit";
 class ReactPro extends LitElement {
   static properties = {
     name: {
-      // type: Boolean,
+      // type: Boolean, perubahan sebelumnya
+      
       type: String,
    
     converter: {
