@@ -2,6 +2,7 @@ import './components/title-app.js';
 import './components/to-dos.js';
 import './components/lit-atrib.js';
 import './components/react-pro.js';
+import './components/lifecycle.js';
 
 const todosContainer = document.querySelector('#todo-container');
 
@@ -18,6 +19,21 @@ removeAttrButton.addEventListener('click', () => {
     reactPro.removeAttribute('name');
 
 });
+
+// latihan life cycle
+const myLifeElements = document.querySelector('life-cycle');
+const changeNameBtn = document.querySelector('button#change-name');
+const changeAgeBtn = document.querySelector('button#change-age');
+
+changeNameBtn.addEventListener('click', () => {
+    console.log('===== Ubah Nama ====');
+    myLifeElements.namel = 'Dicoding Indonesia';
+})
+
+changeAgeBtn.addEventListener('click', () => {
+    console.log('===== Ubah Umur ====');
+    myLifeElements.age = 9;
+})
 
 
 const todos = [

@@ -13,7 +13,7 @@ class ReactPro extends LitElement {
         console.log('fromAttribute');
 
         if (value) {
-          return type(value).toLowerCase();
+          return type(value).toUpperCase();
         }
         return value;
       },
@@ -49,7 +49,7 @@ render() {
 }
 
 _login() {
-  this.name = 'John Doe';
+  this.name = 'Andy Yulianto';
 }
 _logout() {
   this.name = null;
