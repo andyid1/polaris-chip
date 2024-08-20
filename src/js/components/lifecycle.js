@@ -59,6 +59,10 @@ class MyLifeElement extends LitElement {
     return html`
       <p>Selamat Datang!</p>
       <p>${this.namel}, ${this.age}</p>
+    <button @click=${() => this.requestUpdate()}>
+
+      Tombol
+    </button>
     `;
   }
 
